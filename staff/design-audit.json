@@ -1,0 +1,55 @@
+{
+  "base_url": "http://127.0.0.1:8010",
+  "viewports": [
+    {"name": "375", "width": 375, "height": 812},
+    {"name": "768", "width": 768, "height": 1024},
+    {"name": "1440", "width": 1440, "height": 1000}
+  ],
+  "routes": [
+    {"path": "/#/today", "name": "today", "auth": "guest", "wait_for": ".screen-head"},
+    {"path": "/#/fitness", "name": "fitness", "auth": "guest", "wait_for": ".screen-head"},
+    {"path": "/#/nutrition", "name": "nutrition", "auth": "guest", "wait_for": ".screen-head"},
+    {"path": "/#/sleep", "name": "sleep", "auth": "guest", "wait_for": ".screen-head"},
+    {"path": "/#/stats", "name": "stats", "auth": "guest", "wait_for": ".screen-head"},
+    {"path": "/#/settings", "name": "settings", "auth": "guest", "wait_for": ".screen-head"}
+  ],
+  "auth": {"guest": {}},
+  "thresholds": {
+    "min_touch": 44,
+    "min_text_measure": 45,
+    "max_text_measure": 75,
+    "max_distinct_colors": 40,
+    "max_font_families": 2,
+    "max_font_weights": 4,
+    "max_shadows": 4,
+    "max_gradients": 6,
+    "container_tolerance": 2,
+    "overlap_tolerance": 2,
+    "spacing_scale": [4, 8, 12, 14, 16, 18, 20, 24, 26, 32, 40, 42, 48, 64, 96]
+  },
+  "token_names": [
+    "--color-bg",
+    "--color-bg-elevated",
+    "--color-surface",
+    "--color-surface-raised",
+    "--color-surface-soft",
+    "--color-text",
+    "--color-text-soft",
+    "--color-muted",
+    "--color-border",
+    "--color-border-strong",
+    "--color-accent",
+    "--color-accent-strong",
+    "--color-accent-contrast",
+    "--color-danger",
+    "--color-success",
+    "--color-warning",
+    "--color-info",
+    "--color-focus"
+  ],
+  "static_scan": {
+    "css": ["app/static/css/**/*.css"],
+    "html": ["app/static/*.html"],
+    "js": ["app/static/js/**/*.js"]
+  }
+}

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    :root {
+      --color-bg: #08090c;
+      --color-accent: #ff5c45;
+      --color-accent-contrast: #180a07;
+    }
+  </style>
+  <rect width="64" height="64" rx="16" fill="var(--color-bg)"/>
+  <circle cx="32" cy="32" r="19" fill="none" stroke="var(--color-accent)" stroke-width="5"/>
+  <path d="M23 32.5l6 6 12-13" fill="none" stroke="var(--color-accent)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

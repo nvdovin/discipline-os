@@ -1,0 +1,37 @@
+# Secrets — never commit
+.env
+.env.*
+!.env.example
+
+# Database and runtime files
+data/*.db
+data/*.db-*
+data/*.sqlite
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+*.egg-info/
+dist/
+build/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# Local Playwright output
+test-results/
+playwright-report/
+
+# Personal evidence artifacts — kept locally, never published
+staff/screenshots/
+staff/design-review/
+staff/design-review.md
+staff/final-report.md

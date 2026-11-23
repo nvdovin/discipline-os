@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Discipline OS — личный помощник для сна, движения, питания, Библии и главного дела дня.">
+  <title>Discipline OS</title>
+  <link rel="icon" href="/static/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/static/img/icon.svg">
+  <link rel="stylesheet" href="/static/css/app.css?v=1">
+  <script src="/static/js/vendor/telegram-web-app.js"></script>
+  <script src="/static/js/vendor/chart.umd.min.js"></script>
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"></div>
+  <main class="app-shell" id="app">
+    <div id="screen" class="screen"></div>
+  </main>
+  <nav id="bottom-nav" class="bottom-nav" aria-label="Основная навигация"></nav>
+  <button id="fab" class="fab" type="button" hidden aria-label="Добавить"></button>
+  <div id="sheet-root"></div>
+  <div id="toast-root" class="toast-root" aria-live="polite" aria-atomic="true"></div>
+  <noscript>
+    <div class="noscript">Для работы Discipline OS нужен JavaScript.</div>
+  </noscript>
+  <script type="module" src="/static/js/app.js?v=1"></script>
+</body>
+</html>

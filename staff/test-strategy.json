@@ -1,0 +1,57 @@
+{
+  "project": "discipline-os",
+  "updated_at": "2026-11-22",
+  "profiles": {
+    "fast": {
+      "command": "python3 -m pytest -q tests",
+      "timeout": 120,
+      "budget_seconds": 60
+    },
+    "affected": {
+      "command": "python3 -m pytest -q {targets}",
+      "timeout": 600,
+      "budget_seconds": 300
+    },
+    "full": {
+      "command": "python3 -m pytest -q tests",
+      "timeout": 1800,
+      "budget_seconds": 600
+    },
+    "e2e": {
+      "command": "python3 scripts/e2e_smoke.py",
+      "timeout": 900,
+      "budget_seconds": 300
+    }
+  },
+  "test_map": {
+    "app/api/**": ["tests/test_api.py"],
+    "app/services/**": ["tests/test_api.py", "tests/test_security.py"],
+    "app/security.py": ["tests/test_security.py"],
+    "app/schemas.py": ["tests"],
+    "app/models.py": ["tests"],
+    "app/bot/**": ["tests"],
+    "app/static/**": ["tests/test_api.py"],
+    "scripts/e2e_smoke.py": ["tests"]
+  },
+  "e2e_if_changed": [
+    "app/static/**",
+    "app/static/index.html",
+    "scripts/e2e_smoke.py"
+  ],
+  "full_if_changed": [
+    "app/models.py",
+    "app/database.py",
+    "app/config.py",
+    "app/security.py",
+    "app/main.py",
+    "app/seed.py",
+    "app/services/**",
+    "tests/conftest.py",
+    "requirements.txt"
+  ],
+  "notes": [
+    "Backend tests use a temporary SQLite database and never touch data/discipline.db.",
+    "The e2e profile expects a running server at BASE_URL (default http://127.0.0.1:8010/).",
+    "Screenshots are written to staff/screenshots for the design review."
+  ]
+}
